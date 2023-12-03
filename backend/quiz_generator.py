@@ -10,6 +10,7 @@ openai_api_key = os.getenv('OPENAI_API_KEY')
 llm = OpenAI(openai_api_key=openai_api_key)
 prompt_template = PromptTemplate.from_template("Generate a multiple choice questions about {topic} along with the correct answers, make sure that the question is mildly difficult, and make sure that the correct answer is labeled with 'Correct Answer:' and followed by the answer itself")
 
+# Function to generate quiz questions for a given topic
 def generate_quiz_questions(topic, num_questions=5, extra_questions=20):
     questions = []
     total_questions = num_questions + extra_questions
@@ -31,7 +32,7 @@ def generate_quiz_questions(topic, num_questions=5, extra_questions=20):
 
     return questions
 
-
+# Function to process the raw response from the language model
 def process_response(response):
     quiz_data = []
 
@@ -65,6 +66,7 @@ def process_response(response):
 
     return quiz_data
 
+# Code used for testing the script directly
 
 # if __name__ == "__main__":
 #     topic = "Animal Kingdom"
