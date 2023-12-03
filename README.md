@@ -47,7 +47,7 @@ This project is an AI-powered quiz generator developed with Python and Streamlit
    - Use the "Start a New Quiz" option to reset and create a new quiz.
 
 ## Configuration
-- Configure the OpenAI API key in the `.env` file:
+- Configure the OpenAI API key by creating a file named `.env` in the working directory and adding the following line:
   ```
   OPENAI_API_KEY= your api key here
   ```
